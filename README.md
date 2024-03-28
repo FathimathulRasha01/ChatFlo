@@ -1,4 +1,3 @@
-
 # ChatFlow
 
 ## Overview
@@ -14,28 +13,28 @@ ChatFlow is a simple chatting application developed as an assignment project. It
 
 Clone the repo:
 
-bash
+```bash
 git clone https://github.com/FathimathulRasha01/ChatFlo
 cd ChatFlo
-
+```
 
 Install the dependencies:
 
-bash
+```bash
 npm install
-
+```
 
 Run the  server:
 
-bash
+```bash
 npm start
-
+```
 
 ## Environment Variables
 
-The environment variables can be found and modified in the .env file.
+The environment variables can be found and modified in the `.env` file.
 
-bash
+```bash
     REACT_APP_FIREBASE_KEY=
     REACT_APP_AUTH_DOMAIN=
     REACT_APP_PROJECT_ID=
@@ -43,7 +42,7 @@ bash
     REACT_APP_MESSAGING_SENDER_ID=
     REACT_APP_MESSAGING_APP_ID=
 
-
+```
 
 
 
