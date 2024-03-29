@@ -3,6 +3,8 @@ import Img from "../img/img.png";
 import Attach from "../img/attach.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import { LuImagePlus } from "react-icons/lu";
+import { IoMdAttach } from "react-icons/io";
 import {
   arrayUnion,
   doc,
@@ -84,7 +86,7 @@ const Input = () => {
         value={text}
       />
       <div className="send">
-        <img src={Attach} alt="" />
+        <IoMdAttach />
         <input
           type="file"
           style={{ display: "none" }}
@@ -92,7 +94,7 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src={Img} alt="" />
+          <LuImagePlus />
         </label>
         <button onClick={handleSend}><IoSendSharp /></button>
       </div>

@@ -5,6 +5,9 @@ import More from "../img/more.png";
 import Messages from "./Messages";
 import Input from "./Input";
 import { ChatContext } from "../context/ChatContext";
+import { IoMdPersonAdd } from "react-icons/io";
+import { IoVideocamOutline } from "react-icons/io5";
+import { MdOutlineMoreHoriz } from "react-icons/md";
 
 const Chat = () => {
     const { data } = useContext(ChatContext);
@@ -21,9 +24,9 @@ const Chat = () => {
                     </div>
                 </div>
                 <div className="chatIcons">
-                    <img src={Cam} alt="" />
-                    <img src={Add} alt="" />
-                    <img src={More} alt="" />
+                    <IoVideocamOutline />
+                    <IoMdPersonAdd />
+                    <MdOutlineMoreHoriz />
                 </div>
             </div>
             <Messages />

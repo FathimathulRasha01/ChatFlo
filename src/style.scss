@@ -20,16 +20,25 @@
 .form_container {
   background: var(--Grey-10, #1a1a1a);
   height: 100vh;
+  width: 100vw;
+  
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
+  
+
   .form_wrapper {
       display: flex;
-      width: 800px;
-      padding: 80px 200px;
       flex-direction: column;
       align-items: center;
+     justify-content: center;
+
+      width: 100vw;
+    //   height: 100vh;
+      width: 69%;      
+      padding: 80px 200px;
       gap: 45px;
 
       border-radius: 16px;
@@ -77,6 +86,7 @@
               gap: 10px;
               font-family: "lexend";
 
+
               color: white;
               border-radius: 88px;
               border: 1px solid var(--Grey-15, #262626);
@@ -91,11 +101,13 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+              justify-content: c;
 
               padding: 14px 24px;
               gap: 10px;
               border-radius: 63px;
               background: var(--Green-60, #caff33);
+              margin-top: 20px;
               cursor: pointer;
 
               .button_text {
@@ -128,7 +140,7 @@
                   width: 32px;
               }
               .add_text {
-                  color: #caff33;
+                  color: #fff;
               }
           }
       }
@@ -424,12 +436,15 @@
 
           .chatIcons {
               display: flex;
-              gap: 10px;
+              gap: 18px;
 
-              img {
-                  height: 24px;
-                  cursor: pointer;
-              }
+              font-size: 20px;
+              color: #fff;
+
+            //   img {
+            //       height: 24px;
+            //       cursor: pointer;
+            //   }
           }
 
           .messages {
@@ -544,13 +559,16 @@
 
               .send {
                   display: flex;
+                  flex-direction: row;
+                  justify-content: center;
                   align-items: center;
-                  gap: 10px;
 
-                  img {
-                      height: 24px;
-                      cursor: pointer;
-                  }
+                  gap: 10px;
+                  color: #fff;
+                  font-size: 21px;
+                  font-weight: 300;
+
+                  
 
                   button {
                       border: none;
@@ -560,8 +578,21 @@
                       background-color: #1a1a1a;
                       cursor: pointer;
                       font-family: "lexend";
-                      font-size: 20px;
+                      font-size: 21px;
                       font-weight: 500;
+
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                  }
+                  label{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                      font-size: 20px;
                   }
               }
           }
