@@ -13,7 +13,7 @@ const Sidebar = () => {
       <Navbar />
       <Search/>
       <Chats/>
-      <button onClick={()=>signOut(auth)}><div>logout</div></button>
+      {/* <button onClick={()=>signOut(auth)}><div>logout</div></button> */}
     </div>
   );
 };

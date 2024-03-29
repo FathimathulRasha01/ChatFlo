@@ -2,7 +2,7 @@
 
 
 @mixin mobile {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
       @content;
   }
 }
@@ -18,147 +18,154 @@
 }
 
 .form_container {
-  background: var(--Grey-10, #1a1a1a);
-  height: 100vh;
-  width: 100vw;
-  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+//   background: var(--Grey-10, #1a1a1a);
+    background-color: #fff;
+
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
   
 
-  .form_wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-     justify-content: center;
+    .form_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-      width: 100vw;
-    //   height: 100vh;
-      width: 69%;      
-      padding: 80px 200px;
-      gap: 45px;
+        width: 79%;      
+        padding: 80px 200px;
+        gap: 45px;
 
-      border-radius: 16px;
-      border: 1px solid var(--Grey-15, #262626);
-      background: url("./img/container_bg.png");
-      background-repeat: no-repeat;
-      background-blend-mode: overlay, normal;
+        border-radius: 16px;
+        background: url("./img/container_bg.png");
+        // background-color: #5032b0;
+        background-repeat: no-repeat;
+        // background-blend-mode: overlay, normal;
 
-      .logo_name {
-          color: #caff33;
-          font-weight: bold;
-          font-size: 38px;
-          text-align: center;
-          font-family: "Lexend";
-          font-style: normal;
-      }
+        .logo_name {
+            color: #fff;
+            font-weight: bold;
+            font-size: 38px;
+            text-align: center;
+            font-family: "Lexend";
+            font-style: normal;
+        }
 
-      .title {
-          color: var(--Grey-75, #bfbfbf);
-          text-align: center;
-          font-family: "Lexend";
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-      }
+        .title {
+            color: var(--Grey-75, #bfbfbf);
+            text-align: center;
+            font-family: "Lexend";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
 
-      form {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-          gap: 15px;
-          color: #fff;
+            gap: 15px;
+            color: #fff;
 
-          input {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
+            input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
 
-              width: 400px;
-              padding: 20px;
-              gap: 10px;
-              font-family: "lexend";
+                width: 400px;
+                padding: 20px;
+                gap: 10px;
+                font-family: "lexend";
 
 
-              color: white;
-              border-radius: 88px;
-              border: 1px solid var(--Grey-15, #262626);
-              background: var(--Grey-10, #1a1a1a);
+                color: #5032b0;
+                border-radius: 88px;
+                border: 1px solid var(--Grey-15, #14034b);
+                //   background: var(--Grey-10, #1a1a1a);
+                background-color: #fff;
 
-              &::placeholder {
-                  color: rgb(175, 175, 175);
-              }
-          }
+                &::placeholder {
+                    color: #5032b0;
+                }
+            }
 
-          button {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: c;
+            button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: c;
 
-              padding: 14px 24px;
-              gap: 10px;
-              border-radius: 63px;
-              background: var(--Green-60, #caff33);
-              margin-top: 20px;
-              cursor: pointer;
+                padding: 14px 24px;
+                gap: 10px;
+                border-radius: 63px;
+                background: var(--Green-60, #fff);
+                margin-top: 20px;
+                cursor: pointer;
 
-              .button_text {
-                  color: var(--Grey-15, #262626);
+                .button_text {
+                    color: var(--Grey-15, #5032b0);
 
-                  text-align: center;
-                  font-family: "Lexend";
-                  font-size: 16px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 150%;
+                    text-align: center;
+                    font-family: "Lexend";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
 
-                  padding-left: 45px;
-                  padding-right: 50px;
-              }
-          }
+                    padding-left: 45px;
+                    padding-right: 50px;
 
-          label {
-              display: flex;
-              align-items: center;
-              
-              gap: 10px;
-              cursor: pointer;
-              color: #8da4f1;
+                    
+                }
+            }
 
-              font-size: 12px;
-              font-family: "lexend";
+            label {
+                display: flex;
+                align-items: center;
+                
+                gap: 10px;
+                cursor: pointer;
+                color: #8da4f1;
 
-              img {
-                  width: 32px;
-              }
-              .add_text {
-                  color: #fff;
-              }
-          }
-      }
-      p {
-          display: flex;
-          flex-direction: row;
+                font-size: 12px;
+                font-family: "lexend";
 
-          color: var(--Grey-75, #bfbfbf);
-          margin-top: 10px;
-          
-          font-size: 12px;
-          font-family: "lexend";
+                img {
+                    width: 32px;
+                }
+                .add_text {
+                    color: #fff;
+                }
+            }
+        }
+        p {
+        display: flex;
+            flex-direction: row;
 
-          .link_text {
-              color: #caff33;
-          }
-      }
-  }
+            color: var(--Grey-75, #bfbfbf);
+            margin-top: 10px;
+            
+            font-size: 12px;
+            font-family: "lexend";
+
+            @include mobile {
+                font-size: 10px;
+            }
+
+            .link_text {
+                color: #14034b;
+            }
+        }
+    }
 }
 
 .home {
@@ -170,10 +177,14 @@
   align-items: center;
   justify-content: center;
 
-  background-color: #1e1e1e;
+  background-color: #fff;
+
+//   @include mobile {
+//     width: 80%;
+// }
 
   .container {
-      border: 1px solid #1e1e1e;
+      border: 1px solid #5032b0;
       border-radius: 10px;
 
       width: 70%;
@@ -181,31 +192,32 @@
 
       display: flex;
       overflow: hidden;
-      @include tablet {
+      @include mobile {
           width: 90%;
       }
 
       .sidebar {
           flex: 1;
-          background-color: #1a1a1a;
+          background-color: #5032b0;
           position: relative;
+          padding-left: 10px;
 
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
 
-          border-right: 1px solid #1e1e1e;
+          border-right: 1px solid #5032b0;
           gap: 15px;
           
 
           .navbar {
               display: flex;
               justify-content: space-between;
-
-              background-color: #262626;
+             
+              background-color: #fff;
               height: 50px;
               padding: 10px;
-              color: #ffff;
+              color: #825aff;
               gap: 150px;
               margin-top: 10px;
               width:89%;
@@ -218,11 +230,12 @@
                   justify-content: center;
 
                   font-size: 25px;  
-                  font-weight: 500;
+                  font-weight: 300;
                   p{
-                      color: #caff33;
+                      font-weight: 500;
+                      color: #825aff;
                   }
-                  @include tablet {
+                  @include mobile {
                       display: none;
                   }
               }
@@ -240,8 +253,8 @@
 
                   img {
                       background-color: #fff;
-                      height: 24px;
-                      width: 24px;
+                      height: 40px;
+                      width: 40px;
                       border-radius: 50%;
                       object-fit: cover;
                   }
@@ -256,7 +269,7 @@
                       height: 28px;
                       cursor: pointer;
                       font-family: "lexend";
-                      @include tablet {
+                      @include mobile {
                           position: absolute;
                           bottom: 10px;
                       }
@@ -264,92 +277,84 @@
               }
           }
 
-          
-          button {
-            background-color: #1a1a1a;
-            color: #fff;
-            position: absolute;
-            // border-radius: 20px;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            bottom: 0px;
-            // margin-top: auto;
-            // margin-bottom: 0px;
-            font-size: 17px;
-            font-weight: 500;
-            font-family: "lexend";
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            padding: 14px 24px;
-            gap: 10px;
-            // border-radius: 63px;
-            // background: var(--Green-60, #caff33);
-            cursor: pointer;
-
-            @include tablet {
-                position: absolute;
-                bottom: 10px;
-            }
-            
-        }
+        
           .search {
-              border-radius: 20px;
-              border: 1px solid #caff33;
-              background: #2e2e2e;
-              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-              width: 80%;          
+           
+              background: #5032b0;
+                  
               display: flex;
-              align-items: center;
+              align-items: flex-start;
+              justify-content: center;
               gap: 30px;
+
+              
+
 
               .searchForm {
                   padding: 10px;
                 //   width: 10%;
-                  background: #2e2e2e;
-                  border-radius: 20px;
+                  background: #5032b0;
+                //   border-radius: 20px;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
+                  justify-content: center;
+                  
 
                   input {
                       background-color: transparent;
                       border: none;
                       color: white;
                       outline: none;
+                      padding-bottom: 10px;
+                      
+                      border-bottom:1px solid #fff;
 
                       &::placeholder {
-                          color: #59595a;
+                          color: #fff;
+                          font-size: 14px;
                       }
+
+                      @include mobile {
+                        font-size: 10px;
+                        margin-top: 0px;
+                    }
                   }
+              }
+              span{
+                  cursor: default;
+                  border: 1px solid #fff;
+                  border-radius: 20px 20px 20px 0px;
+                  padding: 5px 30px;
               }
           }
         .chats{
             width: 86%;
+            background-color: #5032b0;
+            // border-radius: 30px;
           .userChat {
               padding: 10px;
-            //   margin-bottom: 90px;
-            //   padding-top: 20px;
+            
               display: flex;
               align-items: center;
               gap: 20px;
               color: white;
-            //   width: 80%;
+              cursor: default;
+         
               margin-bottom: 10px;
               cursor: pointer;
               font-family: "lexend";
               font-size: 10px;
               font-weight: 300;
-            //   border: 1px solid #caff33;
-            border-radius: 30px;
-            // border: 1px solid #caff33;
-            // background: #2e2e2e;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              border: none;
+              background-color: #5032b0;
+
+              @include mobile {
+                padding: 6px;
+            }
 
               &:hover {
-                  background-color: #59595a;
+                  background-color: #240e6b;
               }
 
               img {
@@ -365,11 +370,21 @@
                       font-size: 15px;
                       font-weight: 500;
                       font-family: "lexend";
+                      cursor: pointer;
+                      color: #fff;
+
+                      @include mobile {
+                        font-size: 10px;
+                    }
                   }
                   p {
                       font-size: 14px;
                       color: lightgray;
                       font-family: "lexend";
+
+                      @include mobile {
+                        font-size: 10px;
+                    }
                   }
               }
           }
@@ -378,13 +393,12 @@
       .chat {
           flex: 2;
           position: relative;
-        //   gap: 20px;
-        //   margin-top: 10px;
+          background-color: #5032b0;
 
 
           .chatInfo {
               height: 50px;
-              background-color: #1a1a1a  ;
+              background-color: #5032b0  ;
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -396,7 +410,7 @@
                   flex-direction: row-reverse;
                   justify-content: space-between;
                   align-items: center;
-                  background-color: #1a1a1a;
+                  background-color: #5032b0;
                   gap: 10px;
 
                   .displayName {
@@ -407,6 +421,10 @@
                           font-size: 18px;
                           font-weight: 500;
                           font-family: "lexend";
+
+                          @include mobile {
+                            font-size: 12px;
+                        }
                       }
                   }
 
@@ -415,20 +433,16 @@
                       flex-direction: column;
                       align-items: center;
                       justify-content: center;
-                    //   padding: ;
-                    //   width: 60px;
-                    //   height: 60px;
-                      background-color: #1a1a1a;
-                    //   border-radius: 100px;
-
-                    //   margin-right: 10px;
+                  
+                      background-color: #5032b0;
+           
 
                       img {
                           width: 35px;
                           height: 35px;
                           border-radius: 100px;
-                          border: 2px solid #1a1a1a;
-                          background-color: #1a1a1a;
+                          border: 2px solid #5032b0;
+                          background-color: #5032b0;
                       }
                   }
               }
@@ -436,19 +450,43 @@
 
           .chatIcons {
               display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+
               gap: 18px;
 
               font-size: 20px;
               color: #fff;
 
+              @include mobile {
+                font-size: 10px;
+                gap: 9px;
+            }
+
             //   img {
             //       height: 24px;
             //       cursor: pointer;
             //   }
+            button{
+                background-color: #fff;
+                color: #5032b0;
+                border-radius: 30px;
+                padding: 5px 8px;
+
+                @include mobile {
+                    font-size: 10px;
+                    padding: 1px;
+                }
+            }
           }
 
           .messages {
-              background: url(./img/chatbg_image.png);
+            //   background: url(./img/container_bg.png);
+              background-color: #fff;
+              margin-right: 10px;
+              border: none;
+              border-radius: 30px;
               background-size: 100%;
               background-repeat: no-repeat;
               background-position: center;
@@ -468,6 +506,10 @@
                 //   justify-content: center;
                   gap: 20px;
                   margin-bottom: 20px;
+
+                  @include mobile {
+                    gap: 2px;
+                }
 
                   .messageInfo {
                       display: flex;
@@ -495,17 +537,23 @@
                       gap: 10px;
 
                       p {
-                          background-color: #262626;
-                          color: #fff;
+                          background-color: lightgrey;
+                          color: #7550f0;
                           padding: 10px 30px;
                           border-radius: 20px 20px 20px 20px;
                           max-width: max-content;
                           font-family: "lexend";
+
+                          @include mobile {
+                            font-size: 10px;
+                        }
                       }
 
                       img {
                           width: 50%;
                       }
+
+                  
                   }
 
                   &.owner {
@@ -514,11 +562,16 @@
                       .messageContent {
                           align-items: flex-end;
                           p {
-                              background-color: #caff33;
-                              color: #000;
+                              background-color: #7550f0;
+                              color: #fff;
                               border-radius: 20px 20px 0px 20px;
                               font-family: "lexend";
                           }
+
+                        //   @include mobile {
+                        //     position: absolute;
+                        //     bottom: 20px;
+                        // }
                       }
                   }
               }
@@ -527,7 +580,7 @@
           .input {
               height: 50px;
               width: 100%;
-              background-color: #1a1a1a;
+              background-color: #5032b0;
               padding: 10px;
               display: flex;
               align-items: center;
@@ -541,11 +594,11 @@
                   outline: none;
                   color: #fff;
                   font-size: 18px;
-                  background-color: #1a1a1a;
+                  background-color: #5032b0;
 
                   &::placeholder {
                       // color: #ffff;
-                      background-color: #1a1a1a;
+                      background-color: #5032b0;
                       border: solid #262626;
                       // color: var(--iOS-Color-5, #9C9CA3);
                       font-family: "Lexend";
@@ -574,8 +627,8 @@
                       border: none;
                     //   border-radius: 10px;
                       padding: 10px 10px;
-                      color: #caff33;
-                      background-color: #1a1a1a;
+                      color: #fff;
+                      background-color: #5032b0;
                       cursor: pointer;
                       font-family: "lexend";
                       font-size: 21px;

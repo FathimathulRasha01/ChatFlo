@@ -8,6 +8,8 @@ import { ChatContext } from "../context/ChatContext";
 import { IoMdPersonAdd } from "react-icons/io";
 import { IoVideocamOutline } from "react-icons/io5";
 import { MdOutlineMoreHoriz } from "react-icons/md";
+import {signOut} from "firebase/auth"
+import { auth } from '../firebase'
 
 const Chat = () => {
     const { data } = useContext(ChatContext);
@@ -27,6 +29,7 @@ const Chat = () => {
                     <IoVideocamOutline />
                     <IoMdPersonAdd />
                     <MdOutlineMoreHoriz />
+                    <button onClick={()=>signOut(auth)}><div>logout</div></button>
                 </div>
             </div>
             <Messages />

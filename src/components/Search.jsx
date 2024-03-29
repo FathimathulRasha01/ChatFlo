@@ -84,7 +84,7 @@ const Search = () => {
         <IoIosSearch style={{ color:"#797C7B" , paddingLeft:"5px" , paddingRight:"10px" , alignItems:"center", fontSize:"15px"}} />
         <input
           type="text"
-          placeholder="Start a new chat"
+          placeholder="Find a new chat"
           onKeyDown={handleKey}
           onChange={(e) => setUsername(e.target.value)}
           value={username}
@@ -93,7 +93,7 @@ const Search = () => {
       {err && <span>User not found!</span>}
       {user && (
         <div className="userChat" onClick={handleSelect}>
-          <img src={user.photoURL} alt="" />
+          {/* <img src={user.photoURL} alt="" /> */}
           <div className="userChatInfo">
             <span>{user.displayName}</span>
           </div>
