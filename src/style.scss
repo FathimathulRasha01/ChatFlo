@@ -18,7 +18,6 @@
 }
 
 .form_container {
-//   background: var(--Grey-10, #1a1a1a);
     background-color: #fff;
 
     height: 100vh;
@@ -43,9 +42,7 @@
 
         border-radius: 16px;
         background: url("./img/container_bg.png");
-        // background-color: #5032b0;
         background-repeat: no-repeat;
-        // background-blend-mode: overlay, normal;
 
         .logo_name {
             color: #fff;
@@ -90,7 +87,6 @@
                 color: #5032b0;
                 border-radius: 88px;
                 border: 1px solid var(--Grey-15, #14034b);
-                //   background: var(--Grey-10, #1a1a1a);
                 background-color: #fff;
 
                 &::placeholder {
@@ -361,7 +357,7 @@
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
-                  border: 1px solid #caff33;
+                  border: 1px solid #fff;
                   object-fit: cover;
               }
 
@@ -599,7 +595,7 @@
                   &::placeholder {
                       // color: #ffff;
                       background-color: #5032b0;
-                      border: solid #262626;
+                      border: solid #5032b0;
                       // color: var(--iOS-Color-5, #9C9CA3);
                       font-family: "Lexend";
                       font-size: 12px;
