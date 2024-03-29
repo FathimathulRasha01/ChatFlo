@@ -8,11 +8,11 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <span className="logo">Chats</span>
+      <span className="logo">Chat<p>Flo</p></span>
       <div className="user">
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>
-        <button onClick={()=>signOut(auth)}>logout</button>
+        {/* <button onClick={()=>signOut(auth)}>logout</button> */}
       </div>
     </div>
   )

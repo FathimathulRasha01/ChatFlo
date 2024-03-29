@@ -7,7 +7,7 @@ ChatFlow is a simple chatting application developed as an assignment project. It
 - Real-time text messaging
 - Simple and intuitive user interface
 - Ability to send and receive messages instantly
-- Sample user provided: rasha
+- Sample user provided: Test
 
 ## Installation
 

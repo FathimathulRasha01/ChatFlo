@@ -1513,6 +1513,11 @@
   resolved "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.10.1.tgz"
   integrity sha512-Dq5rYfEpdeel0bLVN+nfD1VWmzCkK+pJbSjIawGE+RY4+NIJqhbUDDQjvV0NUK84fMfwxvtFoCtEe70HfZjFcw==
 
+"@fontsource/lexend@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.npmjs.org/@fontsource/lexend/-/lexend-5.0.19.tgz"
+  integrity sha512-eXUgYzJ+XHrNvcXZLVAJRaOZm1hP6UFQvVG/w411ltb0LUT7TJ1jEXVfwlByylySx8AMdajyej0cjrVj+W8uIg==
+
 "@grpc/grpc-js@~1.7.0":
   version "1.7.3"
   resolved "https://registry.npmjs.org/@grpc/grpc-js/-/grpc-js-1.7.3.tgz"

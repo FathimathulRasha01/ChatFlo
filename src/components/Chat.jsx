@@ -7,22 +7,29 @@ import Input from "./Input";
 import { ChatContext } from "../context/ChatContext";
 
 const Chat = () => {
-  const { data } = useContext(ChatContext);
+    const { data } = useContext(ChatContext);
 
-  return (
-    <div className="chat">
-      <div className="chatInfo">
-        <span>{data.user?.displayName}</span>
-        <div className="chatIcons">
-          <img src={Cam} alt="" />
-          <img src={Add} alt="" />
-          <img src={More} alt="" />
+    return (
+        <div className="chat">
+            <div className="chatInfo">
+                <div className="chatInfo-header">
+                    <div className="displayName">
+                        <span>{data.user?.displayName}</span>
+                    </div>
+                    <div className="displayImage">
+                        <img src={data?.user?.photoURL} />
+                    </div>
+                </div>
+                <div className="chatIcons">
+                    <img src={Cam} alt="" />
+                    <img src={Add} alt="" />
+                    <img src={More} alt="" />
+                </div>
+            </div>
+            <Messages />
+            <Input />
         </div>
-      </div>
-      <Messages />
-      <Input/>
-    </div>
-  );
+    );
 };
 
 export default Chat;

@@ -13,6 +13,8 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+// import { VscSend } from "react-icons/vsc";
+import { IoSendSharp } from "react-icons/io5";
 
 const Input = () => {
   const [text, setText] = useState("");
@@ -92,7 +94,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={Img} alt="" />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleSend}><IoSendSharp /></button>
       </div>
     </div>
   );
