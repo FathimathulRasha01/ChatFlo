@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Add from "../img/addAvatar.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -5,6 +6,7 @@ import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+import profile from '../img/profile.jpg'
 
 const Register = () => {
   const [err, setErr] = useState(false);
@@ -20,40 +22,34 @@ const Register = () => {
     const file = e.target[3].files[0];
 
     try {
-      //Create user
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-      //Create a unique image name
-      const date = new Date().getTime();
-      const storageRef = ref(storage, `${displayName + date}`);
+      let downloadURL = profile; 
 
-      await uploadBytesResumable(storageRef, file).then(() => {
-        getDownloadURL(storageRef).then(async (downloadURL) => {
-          try {
-            //Update profile
-            await updateProfile(res.user, {
-              displayName,
-              photoURL: downloadURL,
-            });
-            //create user on firestore
-            await setDoc(doc(db, "users", res.user.uid), {
-              uid: res.user.uid,
-              displayName,
-              email,
-              photoURL: downloadURL,
-            });
+      if (file) {
+        const date = new Date().getTime();
+        const storageRef = ref(storage, `${displayName + date}`);
 
-           
-            await setDoc(doc(db, "userChats", res.user.uid), {});
-            navigate("/");
-          } catch (err) {
-            console.log(err);
-            setErr(true);
-            setLoading(false);
-          }
-        });
+        await uploadBytesResumable(storageRef, file);
+        downloadURL = await getDownloadURL(storageRef);
+      }
+
+      await updateProfile(res.user, {
+        displayName,
+        photoURL: downloadURL,
       });
+
+      await setDoc(doc(db, "users", res.user.uid), {
+        uid: res.user.uid,
+        displayName,
+        email,
+        photoURL: downloadURL,
+      });
+
+      await setDoc(doc(db, "userChats", res.user.uid), {});
+      navigate("/");
     } catch (err) {
+      console.log(err);
       setErr(true);
       setLoading(false);
     }
@@ -68,23 +64,23 @@ const Register = () => {
           <input required type="text" placeholder="Enter your name" />
           <input required type="email" placeholder="Enter your email" />
           <input required type="password" placeholder="Create a password" />
-          <input  style={{ display: "none" }} type="file" id="file" />
+          <input style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
-            <img style={{ display: "none" }} src={Add} alt="" />
-            <span className="add_text">Add Photo</span>
+            <img src={Add} alt="" />
+            <span className="add_photo">Add Photo</span>
           </label>
           <div className="button_container">
-          <button type="Submit" disabled={loading}>
-            <div className="button_text">Sign up</div>
-          </button>
-          </div>   
+            <button type="Submit" disabled={loading}>
+              <div className="button_text">Sign up</div>
+            </button>
+          </div>
           {loading && "Uploading and compressing the image please wait..."}
           {err && <span>Something went wrong</span>}
         </form>
         <p>
           You do have an account? <Link to="/login">
             <div className="link_text">Login</div>
-            </Link>
+          </Link>
         </p>
       </div>
     </div>

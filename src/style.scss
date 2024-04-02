@@ -164,14 +164,15 @@
     }
 }
 
-.home {
-  height: 100vh;
+.home { 
+//   height: 700px;
+//   max-height: 400px;
   width: 100vw;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+//   justify-content: center;
 
   background-color: #fff;
 
@@ -184,10 +185,13 @@
       border-radius: 10px;
 
       width: 70%;
-      height: 85%;
+      margin-top: 15px;
+    //   margin-bottom: 30px;
+
 
       display: flex;
-      overflow: hidden;
+    //   overflow: hidden;
+    // overflow-y: scroll;
       @include mobile {
           width: 90%;
       }
@@ -204,20 +208,29 @@
 
           border-right: 1px solid #5032b0;
           gap: 15px;
+        //   height: 50px;
+
+        
+
+          overflow-y: scroll;
           
 
           .navbar {
               display: flex;
               justify-content: space-between;
+
+            //   position: sticky;
              
               background-color: #fff;
-              height: 50px;
+            //   height: 50px;
               padding: 10px;
               color: #825aff;
               gap: 150px;
               margin-top: 10px;
               width:89%;
               border-radius: 20px;
+
+              
 
               .logo {
                   display: flex;
@@ -329,6 +342,9 @@
             width: 86%;
             background-color: #5032b0;
             // border-radius: 30px;
+            height: 600px;
+            overflow-y: scroll;
+
           .userChat {
               padding: 10px;
             
@@ -390,7 +406,13 @@
       .chat {
           flex: 2;
           position: relative;
+
           background-color: #5032b0;
+          overflow: hidden;
+
+          overflow-y: scroll;
+
+          height: 800px;
 
 
           .chatInfo {
